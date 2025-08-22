@@ -1,9 +1,17 @@
 
-import octofitLogo from '../public/octofitapp-small.png';
+import React from 'react';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import Activities from './components/Activities';
+import Leaderboard from './components/Leaderboard';
+import Teams from './components/Teams';
+import Users from './components/Users';
+import Workouts from './components/Workouts';
+import './App.css';
+import octofitLogo from './octofitapp-small.png';
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <nav className="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
         <div className="container-fluid">
           <Link className="navbar-brand fw-bold d-flex align-items-center" to="/">
@@ -34,7 +42,7 @@ function App() {
           <Route path="/" element={<div className="text-center mt-5"><h2 className="display-4">Welcome to <span className="text-primary">Octofit Tracker</span>!</h2><p className="lead">Track your fitness journey with style.</p></div>} />
         </Routes>
       </div>
-    </Router>
+  </BrowserRouter>
   );
 }
 
